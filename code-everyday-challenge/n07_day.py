@@ -28,7 +28,7 @@ def pisanoperiod(a):
         if a[i]==0 & (a[i+1]==1):
             break
 
-    index = i
+        index = i
     return index
 
 
