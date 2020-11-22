@@ -6,25 +6,43 @@ def get_refills(d, m, n,stops):
         return 0
 
     min_stops = 0
-    for i in range(n):
-        print(stops[i])
+    prev_stops = 0 
+    next_max_d = m
+    for i in range(n-1):
+        # print(stops[i])
+        if prev_stops+m < stops[i]:
+            return -1
+        prev_stops = stops[i]
 
-        if stops[i] <= m and stops[i+1] <= m:
-            if i+1==n-1:
-                if d > m:
-                    min_stops=min_stops+1
-                    return min_stops
+        #if its 2nd last stop
+        # if i==n-1:
+        #     if stops[i+1] < d
 
+
+
+        if stops[i] <= next_max_d and stops[i+1] <= next_max_d:
+            if i==n-1:
+                if d-stops[i+1]<= m :
+                    if d-stops[i+1] > next_max_d:
+                        min_stops=min_stops+1
+                    else:
+                        return min_stops                    
+                else:
+                    return -1
 
             continue
-        elif stops[i] <= m and stops[i+1] > m:
+        elif stops[i] <= next_max_d and stops[i+1] > next_max_d:
             min_stops=min_stops+1
-            m = m+stops[i]
+            next_max_d = m+stops[i]
 
-            if i+1==n-1:
-                if d > m:
-                    min_stops=min_stops+1
-                    return min_stops
+            if i==n-1:
+                if d-stops[i+1]<= m :
+                    if d > next_max_d:
+                        min_stops=min_stops+1
+                    else:
+                        return min_stops  
+                else:
+                    return -1
 
         else :
             return -1
