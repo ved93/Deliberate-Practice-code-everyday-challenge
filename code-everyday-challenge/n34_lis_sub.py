@@ -11,15 +11,18 @@ def lis( A):
         for j in range(i):
             if A[j] < A[i] and T[i] < T[j]+1:
                 T[i] = T[j]+1
-                prev[j] = i
+                prev[i] = j
+
 
     longest =max(T)
+    # print(T)
 
     for i in range( len(A)):
-        if A[i] == longest:
+        if T[i] == longest:
    
             break
     last_index = i
+    # print(last_index, longest)
 
     store = []
     while last_index > 0 :
@@ -27,10 +30,13 @@ def lis( A):
 
         last_index = prev[last_index]
 
-    print(prev)
     store.reverse()
 
-    return store
+    print(prev,store)
+
+    return [A[i] for i in store]
+
+  
 
 
 

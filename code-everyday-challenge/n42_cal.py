@@ -12,7 +12,13 @@ def calc(n):
         if i % 3 == 0:
             count_index.append(i // 3)
 
+        # print(count_index)
+        
+
         min_count = min([operations_count[x] for x in count_index])
+
+        # print(count_index, [operations_count[x] for x in count_index])
+
         operations_count[i] = min_count + 1
     # print(operations_count)
 
@@ -27,9 +33,14 @@ def calc(n):
 
         current_value = min([(c, operations_count[c]) for c in option_list], key=lambda x: x[1])[0]
         value_trail.append(current_value)
+    print(value_trail)
     return reversed(value_trail)
 
 
 
 if __name__ =='__main__':
-    print(calc(10))
+    # input = sys.stdin.read()
+    # n = int(input)
+    # sequence = list(fast_optimal_sequence(n))
+    # print(len(sequence) - 1)
+    print(calc(99))

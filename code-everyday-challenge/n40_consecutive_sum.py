@@ -3,22 +3,27 @@
 def cons_sum(n):
 
     sum = 0
-    i,j = 0,0
-    count = 1
+    i,j = 1,0
+    count = 0
     while j <= n:
         # cur_sum=sum[j]-sum[i]+1
+        # print(sum,i,j)
         if sum ==n:
+
+            print([*range(i,j+1)],sum,i,j)
             count+=1
             sum = sum-i
             i = i+1
             j = j+1
             sum = sum+j 
-        if  sum < n:
+            # print(sum)
+        elif  sum < n:
             j+=1
             sum =sum+j
         else :
-            i+=1
             sum = sum-i
+            i+=1
+
 
 
     return count
@@ -27,4 +32,5 @@ def cons_sum(n):
 
 
 
-print(cons_sum(21))
+print(cons_sum(15))
+
