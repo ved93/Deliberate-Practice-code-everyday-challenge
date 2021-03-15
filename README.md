@@ -4,7 +4,7 @@ Deliberate practice is a method for improving your performance at anything, base
 Current Projects:
 1. [Code Everyday](code-everyday-challenge)
 2. [Learning New Every Week](what-I-learned-this-week) : This will be mix of machine learning and productivity things.
-
+3. [Morning Pages](morning-pages) : This is to sharpen my writing communication. Recently I went crazy about it.
 
 
 If you want to know more about **Deliberate Practice**. Read below links:  
