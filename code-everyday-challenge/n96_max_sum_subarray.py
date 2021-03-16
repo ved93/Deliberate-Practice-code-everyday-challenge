@@ -5,6 +5,7 @@
 # Output: 6
 # Explanation: [4,-1,2,1] has the largest sum = 6.
 
+#https://www.geeksforgeeks.org/print-the-maximum-subarray-sum/
 
 def naive(a):
     b = []
@@ -21,14 +22,34 @@ def naive(a):
 
 def main(a):
     curr_sum = max_sum = a[0]
-
+    end_index = 0
     for i in range(1,len(a)):
         curr_sum=max(a[i], curr_sum+a[i])
 
+
+        if max_sum < curr_sum:
+            end_index = i
+
         max_sum = max(max_sum, curr_sum)
+        
 
+    _max_sum = max_sum
+    start_index = end_index
 
-    return max_sum
+    while start_index >= 0:
+        _max_sum -=a[start_index]
+
+        if _max_sum ==0:
+            break
+
+        start_index -= 1
+
+    # print(start_index, end_index)
+
+    for i in range(start_index, end_index+1):
+        print(a[i], end=" ")
+
+    return  max_sum
 
 
 
