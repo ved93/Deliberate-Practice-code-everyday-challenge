@@ -2,7 +2,7 @@
 Deliberate practice is a method for improving your performance at anything, based on constant feedback and working at the edge of your abilities. Elite people in every field use it to build up their expertise.
 
 Current Projects:
-1. [Code Everyday](code-everyday-challenge)
+1. [Code Everyday](code-everyday-challenge) *update: 100 days completed.Just extending the challenge*
 2. [Learning New Every Week](what-I-learned-this-week) : This will be mix of machine learning and productivity things.
 3. [Morning Pages](morning-pages) : This is to sharpen my writing communication. Recently I went crazy about it.
 
