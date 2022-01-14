@@ -3,7 +3,7 @@
 # https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/?ref=leftbar-rightbar
 
 
-
+# Wrong implementation
 def binary_search(a,k, low, high):
     mid = (low+high)//2
 
@@ -19,6 +19,7 @@ def binary_search(a,k, low, high):
         return -1
 
 
+# Wrong implementation
 
 def search_rotated_array(a,k):
     low, high = 0, len(a)-1
@@ -33,6 +34,7 @@ def search_rotated_array(a,k):
 
     return -1
 
+# Wrong implementation
 
 
 
@@ -41,4 +43,4 @@ if __name__ == "__main__":
     # a = sorted(a)
     # print(a)
     # print(binary_search(a,72, 0, len(a)-1))
-    print(search_rotated_array(a,9))
+    print(search_rotated_array(a,10))
