@@ -1,5 +1,11 @@
 # https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1/?track=md-arrays&batchId=144#
 
+
+#very imp
+# https://leetcode.com/problems/majority-element/discuss/51864/Python-solution(sorting-hashmap-moore-voting-bit-manipulation)
+# https://leetcode.com/problems/majority-element/discuss/51712/Python-different-solutions
+
+
 from collections import defaultdict
 
 def majority_element(a):
